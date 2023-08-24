@@ -60,12 +60,31 @@ body {
 }
 
 .img-container {
-  width: clamp(200px, 30%, 400px);
+  width: clamp(200px, 30%, 450px);
   background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0 0;
+}
+
+/* === Img === */
+
+img {
+  height: 70%;
+}
+
+/* === Font === */
+
 h1 {
   font-family: 'NorseBold';
+  color: white;
+  font-size: 5rem;
 }
