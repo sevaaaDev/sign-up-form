@@ -52,7 +52,19 @@ table {
   src: url(font/Norse-Bold.otf) format('opentype');
 }
 
+/* === Layout === */
 
+body {
+  display: flex;
+  min-height: 100svh;
+}
+
+.img-container {
+  width: clamp(200px, 30%, 400px);
+  background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 h1 {
   font-family: 'NorseBold';
