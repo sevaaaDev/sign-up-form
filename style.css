@@ -44,6 +44,10 @@ table {
 	border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* End CSS Reset */
 
 @font-face {
@@ -57,6 +61,7 @@ body {
   display: flex;
   min-height: 100svh;
   flex-wrap: wrap;
+  font-family: roboto, sans-serif;
 }
 
 .img-container {
@@ -80,18 +85,39 @@ body {
 }
 
 .container {
-  padding: 1rem;
+  padding: 1.5rem 3rem 2rem;
 }
 
 .infotext-container {
-  padding: 3rem 1rem 1rem;
+  padding: 3rem 3rem 2rem;
 }
 
 /* === Form === */
 
 section.form {
-  border: 1px solid;
+  box-shadow: 0 3px 10px #bbb;
 }
+
+
+.form > ul {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 300px;
+}
+
 
 /* === Img === */
 
@@ -108,7 +134,12 @@ h1 {
 }
 
 .infotext-container p {
-  font-family: roboto, sans-serif;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+.form > h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem;
 }
