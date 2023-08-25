@@ -1,47 +1,128 @@
 /* Start CSS Reset */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
@@ -51,8 +132,8 @@ table {
 /* End CSS Reset */
 
 @font-face {
-  font-family: 'NorseBold';
-  src: url(font/Norse-Bold.otf) format('opentype');
+  font-family: "NorseBold";
+  src: url(font/Norse-Bold.otf) format("opentype");
 }
 
 /* === Layout === */
@@ -81,7 +162,9 @@ body {
 }
 
 .form-container {
+  margin: 0 auto;
   width: 70%;
+  min-width: 580px;
 }
 
 .container {
@@ -103,7 +186,6 @@ section.form {
   box-shadow: 0 3px 10px #bbb;
 }
 
-
 .form > ul {
   width: 70%;
   display: flex;
@@ -114,16 +196,15 @@ section.form {
 label {
   display: block;
   margin: 5px 0;
-  font-size: 0.7rem;
+  font-size: clamp(0.3rem, 5vw, 0.7rem);
   font-weight: 600;
   letter-spacing: 2px;
 }
 
 input {
   width: 250px;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
 }
-
 
 /* === Img === */
 
@@ -134,18 +215,18 @@ img {
 /* === Font === */
 
 h1 {
-  font-family: 'NorseBold';
+  font-family: "NorseBold";
   color: white;
   font-size: 5rem;
 }
 
 .infotext-container p {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: clamp(0.7rem, 5vw, 1.3rem);
 }
 
 .form > h2 {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.3rem);
   font-weight: bold;
   margin: 0 0 1.5rem;
 }
@@ -155,7 +236,7 @@ em {
 }
 
 a {
-  color: #596D48;
+  color: #596d48;
   text-decoration: none;
   font-weight: bold;
 }
@@ -164,12 +245,12 @@ a {
 
 button {
   font-weight: bold;
-  padding: .7em 2.5em;
+  padding: 0.7em 2.5em;
   border-radius: 8px;
   margin: 0 0 1.5rem;
   color: white;
   border: none;
-  background-color: #596D48;
+  background-color: #596d48;
 }
 
 /* === Form pseudo-classes === */
@@ -182,4 +263,57 @@ input:focus {
 input.error {
   border: 1px solid red;
   position: relative;
+}
+
+/* === Media Queries === */
+
+@media (width < 830px) {
+  body {
+    min-height: 0;
+  }
+
+  .form-container,
+  .infotext-container {
+    width: 90%;
+    min-width: 0;
+  }
+
+  .infotext-container {
+    padding: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem 1rem;
+  }
+
+  .form > h2 {
+    text-align: center;
+  }
+
+  .form > ul {
+    justify-content: center;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .text-header {
+    margin: 0;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+
+  button+p {
+    text-align: center;
+  }
 }
