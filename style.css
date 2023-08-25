@@ -46,7 +46,6 @@ table {
 
 /* End CSS Reset */
 
-
 @font-face {
   font-family: 'NorseBold';
   src: url(font/Norse-Bold.otf) format('opentype');
@@ -57,10 +56,11 @@ table {
 body {
   display: flex;
   min-height: 100svh;
+  flex-wrap: wrap;
 }
 
 .img-container {
-  width: clamp(200px, 30%, 450px);
+  width: 30%;
   background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,6 +73,18 @@ body {
   align-items: center;
   justify-content: center;
   margin: 5rem 0 0;
+}
+
+.form-container {
+  width: 70%;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.infotext-container {
+  padding: 3rem 1rem 1rem;
 }
 
 /* === Form === */
@@ -93,4 +105,10 @@ h1 {
   font-family: 'NorseBold';
   color: white;
   font-size: 5rem;
+}
+
+.infotext-container p {
+  font-family: roboto, sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
