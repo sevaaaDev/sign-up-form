@@ -152,3 +152,15 @@ h1 {
 em {
   font-style: italic;
 }
+
+/* === Button === */
+
+button {
+  font-weight: bold;
+  padding: .7em 2.5em;
+  border-radius: 8px;
+  margin: 0 0 1.5rem;
+  color: white;
+  border: none;
+  background-color: #596D48;
+}
