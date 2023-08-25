@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Sign up</title>
-</head>
-<body>
-  <div class="img-container">
-    <header>
-      <img src="assets/odin-lined.png" alt="Odin Logo">
-      <h1>ODIN</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign up</title>
+  </head>
+  <body>
+    <header class="img-container">
+      <section class="text-header">
+        <img src="assets/odin-lined.png" alt="Odin Logo">
+        <h1>ODIN</h1>
+      </section>
     </header>
-  </div>
-  <div class="form-container">
-    <div class="container">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ratione commodi dicta eos numquam optio placeat, modi consectetur pariatur facilis beatae necessitatibus architecto incidunt? Molestiae alias minus quis aliquid eveniet?</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <form action="#" class="container">
-      <h2>Let's do this!</h2>
-      <ul>
-        <li>
-          <label for="first-name">First name</label>
-          <input type="text" name="first_name" id="first-name">
-        </li>
-        <li>
-          <label for="last-name">Last name</label>
-          <input type="text" name="last_name" id="last-name">
-        </li>
-        <li>
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email">
-        </li>
-        <li>
-          <label for="phone-number">Phone number</label>
-          <input type="tel" name="phone_number" id="phone-number">
-        </li>
-        <li>
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password">
-        </li>
-        <li>
-          <label for="confirm-pw">Confirm password</label>
-          <input type="password" name="confirm_password" id="confirm-pw">
-        </li>
-      </ul>
-    </form>
-  </div>
-</body>
+    <main class="form-container">
+      <section class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ratione commodi dicta eos numquam optio placeat,
+          modi consectetur pariatur facilis beatae necessitatibus architecto incidunt? Molestiae alias minus quis
+          aliquid eveniet?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </section>
+      <form action="#" class="container">
+        <section class="form container">
+          <h2>Let's do this!</h2>
+          <ul>
+            <li>
+              <label for="first-name">First name</label>
+              <input type="text" name="first_name" id="first-name">
+            </li>
+            <li>
+              <label for="last-name">Last name</label>
+              <input type="text" name="last_name" id="last-name">
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email">
+            </li>
+            <li>
+              <label for="phone-number">Phone number</label>
+              <input type="tel" name="phone_number" id="phone-number">
+            </li>
+            <li>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password">
+            </li>
+            <li>
+              <label for="confirm-pw">Confirm password</label>
+              <input type="password" name="confirm_password" id="confirm-pw">
+            </li>
+          </ul>
+        </section>
+          <button>Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+      </form>
+    </main>
+  </body>
 </html>
