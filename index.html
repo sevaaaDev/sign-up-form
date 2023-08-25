@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Sign up</title>
   </head>
   <body>
@@ -15,8 +16,9 @@
     </header>
     <main class="form-container">
       <section class="infotext-container">
-        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>
-        Sign up <em>now</em> to get started.</p>
+        <p>This is not a real online service! You know you need something like this in your life to help you realize
+          your deepest dreams. <br>
+          Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> you want to</p>
       </section>
       <form action="#">
@@ -41,7 +43,8 @@
             </li>
             <li>
               <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" class="error" required>
+              <input type="password" name="password" id="password" minlength="12" required>
+              <div class="error"></div>
             </li>
             <li>
               <label for="confirm-pw">CONFIRM PASSWORD</label>
@@ -55,7 +58,8 @@
         </section>
       </form>
       <footer class="container">
-        <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
+        <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a
+            href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
       </footer>
     </main>
   </body>
