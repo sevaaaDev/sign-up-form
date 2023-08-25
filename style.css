@@ -121,6 +121,7 @@ label {
 
 input {
   width: 250px;
+  border: 1px solid #E5E7EB;
 }
 
 
@@ -153,6 +154,12 @@ em {
   font-style: italic;
 }
 
+a {
+  color: #596D48;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* === Button === */
 
 button {
@@ -163,4 +170,16 @@ button {
   color: white;
   border: none;
   background-color: #596D48;
+}
+
+/* === Form pseudo-classes === */
+
+input:focus {
+  border: 1px solid blue;
+  box-shadow: 1px 1px 10px #aaa;
+}
+
+input.error {
+  border: 1px solid red;
+  position: relative;
 }
