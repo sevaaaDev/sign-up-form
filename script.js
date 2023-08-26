@@ -11,30 +11,38 @@ const confirmPwError = document.querySelector('#confirmPw + .error')
 let removeError = {
   password: () => {
     passwordError.innerText = ``
+    password.classList.remove('error')
   },
   confirmPw: () => {
     confirmPwError.innerText = ``
+    confirmPw.classList.remove('error')
   },
   email: () => {
     emailError.innerText = ``
+    email.classList.remove('error')
   },
   firstName: () => {
     firstNameError.innerText = ``
+    firstName.classList.remove('error')
   },
 }
 
 let error = {
   password: (errorType) => {
     passwordError.innerText = `* Password ${errorType}`
+    password.classList.add('error')
   },
   confirmPw: (errorType) => {
     confirmPwError.innerText = `* Confirm password ${errorType}`
+    confirmPw.classList.add('error')
   },
   email: (errorType) => {
     emailError.innerText = `* Email ${errorType}`
+    email.classList.add('error')
   },
   firstName: (errorType) => {
     firstNameError.innerText = `* First Name ${errorType}`
+    firstName.classList.add('error')
   }
 }
 
