@@ -348,7 +348,7 @@ li > div.error {
   }
 }
 
-@media (width < 380px) {
+@media (width < 385px) {
   .form > ul > li {
     width: 90%;
   }
