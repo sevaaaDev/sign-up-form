@@ -136,6 +136,14 @@ table {
   src: url(font/Norse-Bold.otf) format("opentype");
 }
 
+:root {
+  --primary-clr: hsl(217, 44%, 25%);
+  --secondary-clr: hsl(331, 90%, 36%);
+  --text-clr: #b9caf6;
+  --shadow-clr: hsl(217, 44%, 15%);
+  --inp-border-rad: 5px;
+}
+
 /* === Layout === */
 
 body {
@@ -143,11 +151,13 @@ body {
   min-height: 100svh;
   flex-wrap: wrap;
   font-family: roboto, sans-serif;
+  color: var(--text-clr);
+  background-color: var(--primary-clr);
 }
 
 .img-container {
   width: 30%;
-  background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+  background-image: url(assets/cheng-feng-psdV2Rl-GvU-unsplash.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -165,6 +175,7 @@ body {
   margin: 0 auto;
   width: 70%;
   min-width: 580px;
+  background-color: var(--primary-clr);
 }
 
 .container {
@@ -187,7 +198,7 @@ footer.container {
 /* === Form === */
 
 section.form {
-  box-shadow: 0 3px 10px #bbb;
+  box-shadow: 0 3px 10px var(--shadow-clr);
 }
 
 .form > ul {
@@ -207,7 +218,9 @@ label {
 
 input {
   width: 250px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--primary-clr);
+  border-radius: var(--inp-border-rad);
+
 }
 
 /* === Img === */
@@ -240,9 +253,13 @@ em {
 }
 
 a {
-  color: #596d48;
+  color: hsl(338, 72%, 65%);
   text-decoration: none;
   font-weight: bold;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
 /* === Button === */
@@ -254,19 +271,24 @@ button {
   margin: 0 0 1.5rem;
   color: white;
   border: none;
-  background-color: #596d48;
+  background-color: var(--secondary-clr);
 }
 
-/* === Form pseudo-classes === */
+/* === Form pseudo === */
 
 input:focus {
-  border: 1px solid blue;
+  border: 1px solid var(--secondary-clr);
   box-shadow: 1px 1px 10px #aaa;
 }
 
 input.error {
   border: 1px solid red;
-  position: relative;
+}
+
+li > div.error {
+  font-size: 0.7rem;
+  color: red;
+  line-height: 1.5;
 }
 
 /* === Media Queries === */
@@ -318,6 +340,10 @@ input.error {
   }
 
   button+p {
+    text-align: center;
+  }
+
+  footer p {
     text-align: center;
   }
 }
