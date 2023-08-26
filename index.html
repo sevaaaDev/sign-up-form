@@ -21,13 +21,14 @@
           Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> you want to</p>
       </section>
-      <form action="#">
+      <form action="#" novalidate>
         <section class="form container">
           <h2>Let's do this!</h2>
           <ul>
             <li>
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first_name" id="first-name" required>
+              <label for="firstName">FIRST NAME</label>
+              <input type="text" name="first_name" id="firstName" required>
+              <div class="error"></div>
             </li>
             <li>
               <label for="last-name">LAST NAME</label>
@@ -36,6 +37,7 @@
             <li>
               <label for="email">EMAIL</label>
               <input type="email" name="email" id="email" required>
+              <div class="error"></div>
             </li>
             <li>
               <label for="phone-number">PHONE NUMBER</label>
@@ -43,12 +45,12 @@
             </li>
             <li>
               <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" required>
+              <input type="password" name="password" id="password" minlength="12" required>
               <div class="error"></div>
             </li>
             <li>
-              <label for="confirm-pw">CONFIRM PASSWORD</label>
-              <input type="password" name="confirm_password" id="confirm-pw" required>
+              <label for="confirmPw">CONFIRM PASSWORD</label>
+              <input type="password" name="confirm_password" id="confirmPw" required>
               <div class="error"></div>
             </li>
           </ul>
