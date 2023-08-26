@@ -286,8 +286,8 @@ input.error {
 }
 
 li > div.error {
-  font-size: 0.7rem;
-  color: red;
+  font-size: 0.6rem;
+  color: hsl(15, 100%, 70%);
   line-height: 1.5;
 }
 
