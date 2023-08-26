@@ -33,7 +33,7 @@ let error = {
     password.classList.add('error')
   },
   confirmPw: (errorType) => {
-    confirmPwError.innerText = `* password ${errorType}`
+    confirmPwError.innerText = `* Password ${errorType}`
     confirmPw.classList.add('error')
   },
   email: (errorType) => {
